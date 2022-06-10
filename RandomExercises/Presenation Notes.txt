@@ -1,0 +1,11 @@
+An array is a datatype that can store more than one value in a single variable and this information can be manipulated, you can add, edit and remove data inside it as needed.
+
+The reason why we use arrays is because we can store a lot of information in one location. Other datatypes such as strings or integers can only store one value at a time and not using arrays will limit your options when working with large amounts of data.
+
+Some examples of what we would use an array for includes:
+
+A list of all available movies at a cinema
+A menu at a restaurant
+A catalogue of addresses
+
+My colleague Ben will now cover some of the methods that can be used to manipulate the array.
