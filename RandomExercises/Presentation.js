@@ -30,7 +30,7 @@ for(let i = 0; i <= 20; i++)
 console.log(`Numbers divisible by 2 between 0 and 20 are: ${multiplesTwo}.`)
 
 
-// //String Array - Mohammed
+ //String Array - Mohammed
 
 // let drinks = [
 //     "Coffee",
