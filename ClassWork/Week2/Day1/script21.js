@@ -1,13 +1,18 @@
-function writeBackwards()
-{
-    let reversedWord = ""
-    for (let letterIndex = 0; letterIndex < word.length; letterIndex++) {
+// function writeBackwards()
+// {
+//     let reversedWord = ""
+
+//     for (let letterIndex = 0; letterIndex < word.length; letterIndex++) 
+//     {
         
-        console.log("Done")
-    }
-}
+//         console.log("Done")
+//     }
+// }
 
 
 
-let word = "Cookie"
-writeBackwards(word)
+// let word = "Cookie"
+// writeBackwards(word)
+
+
+
