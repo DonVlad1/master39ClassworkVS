@@ -1,0 +1,32 @@
+body 
+{
+    background-color:rgb(89, 204, 204)    
+}
+
+#header
+{
+    font-size: 100x;  
+}
+
+.topSection
+{
+    border-color: green;
+    border-width: 5px;
+    border-style: dotted;
+}
+
+
+#imagesContainer
+{
+    width: 100%;
+    background-color: green;
+}
+
+img 
+{
+    width:25%;
+    /* padding:10px; */
+    border: solid 5px red;
+    /* margin: 10px;
+    box-sizing: border-box; */
+}
