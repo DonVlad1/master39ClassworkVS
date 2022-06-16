@@ -1,3 +1,5 @@
+* {box-sizing: border-box;}
+
 body 
 {
     background-color: white
@@ -8,10 +10,10 @@ body
     font-size: 100x;  
 }
 
-.topSection
+.headerBanner
 {
     border-color: green;
-    border-width: 5px;
+    border-width: 0px;
     border-style: dotted;
 }
 
@@ -29,4 +31,16 @@ img
     border: solid 5px red;
     /* margin: 10px;
     box-sizing: border-box; */
+}
+
+.contactUsAndSignIn
+{
+    align-items: center;
+    background-color: rgb(34, 32, 32);
+    color: white;
+}
+
+#searchBox
+{
+    justify-content: flex-end;
 }
