@@ -1,4 +1,30 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat+Alternates:900');
+
+/* This is the base template file - please use the supplied slides to experiment */
 * {box-sizing: border-box;}
+
+.box {
+    color: white;
+    font-size: 20px;
+    padding: 0px;
+    
+}
+  
+/* Colours for each box */
+.contactUsAndSignIn { background:#eccc68; flex-basis: 500px; flex-shrink:1}
+.logoSearchRegion { background:white; flex-basis: 500px; flex-shrink:2}
+.pictureBanner { background: white; flex-basis: 500px; flex-shrink:3}
+
+
+
+
+
+
+.container
+{
+    display:flex;
+    min-height:100vh;
+}
 
 body 
 {
@@ -26,21 +52,38 @@ body
 
 img 
 {
-    width:25%;
+    /* width: ;
     /* padding:10px; */
-    border: solid 5px red;
+    /* border: solid 5px red;
     /* margin: 10px;
-    box-sizing: border-box; */
+    box-sizing: border-box; */ 
 }
 
 .contactUsAndSignIn
 {
-    align-items: center;
+    display:flex;
+    justify-content:flex-end;
     background-color: rgb(34, 32, 32);
     color: white;
+    align-items: center;
 }
 
-#searchBox
+
+.eMail
 {
-    justify-content: flex-end;
+    align-self: flex-start;
+}
+
+
+.logoSearchRegion
+{
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+.bannerImage
+{
+    display: flex;
 }
