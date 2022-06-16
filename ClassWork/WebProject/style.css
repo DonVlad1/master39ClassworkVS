@@ -11,7 +11,7 @@
 
 
 /* Colours for each box */
-.headerBanner { background: rgb(61, 56, 56); flex-basis: 2000px; flex-shrink:1}
+.headerBanner { background: rgb(61, 56, 56); flex-basis: 2000px; height: 250px;flex-shrink:1}
 .logoSearchRegion { background:white; flex-basis: 2000px; flex-shrink:2}
 .pictureBanner { background: white; flex-basis: 2000px; flex-shrink:3}
 
@@ -20,14 +20,16 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
-
+    height: 35px;
 }
 
 .contactUs
 {
     display: flex;
-    padding: 10px;
-    width: 800px;
+    align-items: center;
+    padding-inline: 20px;
+    width: 1300px;
+    height: 75%%;
 
 }
 
@@ -35,10 +37,28 @@
 {
     display: flex;
     align-items: center;
-    justify-content: flex-end;
-    padding-inline: 20px;
-    width: 800px;
+    height: 100%;
+    width: 25%;
 }
+
+.giftList
+{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 25%;
+}
+
+.logIn
+{
+    display: flex;
+    align-items: center;
+    padding-inline: 10px;
+    height: 100%;
+    width: 75%;
+
+}
+
 
 .giftList
 {
@@ -72,4 +92,9 @@ body
 .bannerImage
 {
     display: flex;
+}
+
+img
+{
+    height: 100%;
 }
