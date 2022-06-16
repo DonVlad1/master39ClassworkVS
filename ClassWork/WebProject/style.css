@@ -6,81 +6,67 @@
 .box {
     color: white;
     font-size: 20px;
-    padding: 0px;
     
 }
-  
+
+
 /* Colours for each box */
-.contactUsAndSignIn { background:#eccc68; flex-basis: 500px; flex-shrink:1}
-.logoSearchRegion { background:white; flex-basis: 500px; flex-shrink:2}
-.pictureBanner { background: white; flex-basis: 500px; flex-shrink:3}
+.headerBanner { background: rgb(61, 56, 56); flex-basis: 2000px; flex-shrink:1}
+.logoSearchRegion { background:white; flex-basis: 2000px; flex-shrink:2}
+.pictureBanner { background: white; flex-basis: 2000px; flex-shrink:3}
 
-
-
-
-
-
-.container
+.loginBar
 {
-    display:flex;
-    min-height:100vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
 }
+
+.contactUs
+{
+    display: flex;
+    padding: 10px;
+    width: 800px;
+
+}
+
+.signIn
+{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-inline: 20px;
+    width: 800px;
+}
+
+.giftList
+{
+    padding: 10px;
+}
+
 
 body 
 {
     background-color: white
 }
 
-#header
-{
-    font-size: 100x;  
-}
-
-.headerBanner
-{
-    border-color: green;
-    border-width: 0px;
-    border-style: dotted;
-}
-
-
-#imagesContainer
+.imagineBanner
 {
     width: 100%;
     background-color: green;
 }
 
-img 
-{
-    /* width: ;
-    /* padding:10px; */
-    /* border: solid 5px red;
-    /* margin: 10px;
-    box-sizing: border-box; */ 
-}
-
-.contactUsAndSignIn
-{
-    display:flex;
-    justify-content:flex-end;
-    background-color: rgb(34, 32, 32);
-    color: white;
-    align-items: center;
-}
-
 
 .eMail
 {
-    align-self: flex-start;
+    align-self: flex-en;
 }
 
 
-.logoSearchRegion
-{
-    display:flex;
-    justify-content: space-evenly;
-    align-items: center;
-}
+
+
+
 
 
 .bannerImage
