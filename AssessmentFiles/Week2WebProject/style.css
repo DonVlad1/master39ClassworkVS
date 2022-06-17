@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat+Alternates:900');
+
+/* This is the base template file - please use the supplied slides to experiment */
+* {box-sizing: border-box;}
+
+.box {
+    color: white;
+    font-size: 20px;
+    
+}
+
+body 
+{
+    background-color: white
+}
+
+img
+{
+    width: 80%;
+}
+
+
+/* Colours for each box */
+.headerBanner { background: rgb(61, 56, 56); color:white; flex-basis: 1500px; height: 250px;flex-shrink:1}
+.logoSearchRegion { background: white; color:black; flex-basis: 1500px; flex-shrink:2}
+.navBar { background: rgb(61, 56, 56); color:white; flex-basis: 1500px; flex-shrink:2}
+.pictureBanner { background: white; flex-basis: 1500px; flex-shrink:3}
+
+
+
+
+
+/* ---------------------------------------------- HEADDER --------------------------------------------------- */
+
+
+
+/* ------------------------- UPPER HEADER ------------------ */
+.loginBar
+{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 15%;
+}
+
+.contactUs
+{
+    display: flex;
+    align-items: center;
+    padding-inline: 20px;
+    width: 1300px;
+    height: 75%;
+}
+
+.signIn
+{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 25%;
+}
+
+.giftList
+{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 25%;
+}
+
+.logIn
+{
+    display: flex;
+    align-items: center;
+    padding-inline: 10px;
+    height: 100%;
+    width: 75%;
+}
+
+.logInImg
+{
+    height: 100%;
+    width: 12.5%;
+}
+
+.giftList
+{
+    padding: 10px;
+}
+
+
+
+/* ------------------------- MIDDLE HEADER --------------------- */
+
+
+.logoSearchRegion
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-evenly;
+}
+
+.gwLogo
+{
+    height: 80%;
+    width: 20%;
+}
+
+.searchBox
+{
+    align-items: center;
+    height: 90%;
+    width: 60%;
+}
+
+
+.deliveryRegion
+{
+    display: flex;
+    align-items: center;
+    padding-inline: 20px;
+    height: 15%;
+    width: 5%;
+}
+
+
+
+/* ------------------------- LOWER HEADER --------------------- */
+
+
+.navBar
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+    width: 100%;
+}
+
+.nav1
+{
+    display: flex;
+    height: 40%;
+    width: 5%;
+}
+
+.nav2
+{
+    display: flex;
+    height: 40%;
+    width: 10%;
+}
+.nav3
+{
+    display: flex;
+    height: 40%;
+    width: 10%;
+}
+.nav4
+{
+    display: flex;
+    height: 40%;
+    width: 10%;
+}
+.nav5
+{
+    display: flex;
+    height: 40%;
+    width: 10%;
+}
+.nav6
+{
+    display: flex;
+    height: 40%;
+    width: 10%;
+}
+.nav7
+{
+    display: flex;
+    height: 40%;
+    width: 5%;
+}
+.nav8
+{
+    display: flex;
+    height: 40%;
+    width: 5%;
+}
+.nav9
+{
+    display: flex;
+    height: 40%;
+    width: 5%;
+}
+.nav10
+{
+
+    display: flex;
+    height: 40%;
+    width: 5%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.imagineBanner
+{
+    width: 100%;
+    background-color: green;
+}
+
+
+
+
+.bannerImage
+{
+    display: flex;
+}
+
