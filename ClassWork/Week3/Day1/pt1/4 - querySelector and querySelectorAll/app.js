@@ -9,12 +9,10 @@
 // console.log(green);
 
 
-const items = document.querySelectorAll("li:nth-child(even)")
+const items = document.querySelectorAll("li")
+const colours = ["blue", "green", "yellow", "purple", "brown", "grey", "orange"]
 
 for (let index = 0; index < items.length; index++) {
-    items[index].style.color = "lightgreen"
+
+    items[index].style.color = colours[Math.round(Math.random()*10)]
 }
-
-
-
-// console.log(items);
