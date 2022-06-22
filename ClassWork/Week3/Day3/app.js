@@ -1,26 +1,25 @@
 const input = document.getElementById("input")
-const button = document.getElementById("submit")
+const useKey = document.getElementById("useKey")
 const removeButton = document.getElementById("remove")
 const keyPress = document.getElementById("keyPress")
 const keyCode = document.getElementById("keyCode")
 const keyWhich = document.getElementById("keyWhich")
-const boomkSound = document.getElementById("boom")
+const boomSound = document.getElementById("boom")
 const clapSound = document.getElementById("clap")
 const hiHatSound = document.getElementById("hiHat")
-const kickound = document.getElementById("kick")
+const kickSound = document.getElementById("kick")
 const openHatSound = document.getElementById("openHat")
 const rideSound = document.getElementById("ride")
 const snareSound = document.getElementById("snare")
 const tinkSound = document.getElementById("tink")
 const tomSound = document.getElementById("tom")
 
-// boomSound.play()
 
-button.addEventListener("keypress", (event) => {
-    keyPress.textContent = event.key
+function playSound(event)
+{
     if (event.key == "q")
     {
-        boomkSound.play()
+        boomSound.play()
     }
 
     if (event.key == "w")
@@ -35,7 +34,7 @@ button.addEventListener("keypress", (event) => {
 
     if (event.key == "r")
     {
-        kickound.play()
+        kickSound.play()
     }
 
     if (event.key == "t")
@@ -62,9 +61,49 @@ button.addEventListener("keypress", (event) => {
     {
         tomSound.play()
     }
+}
 
 
+useKey.addEventListener("keypress", (event) => {
+    playSound(event)
 })
+
+boomButton.addEventListener("click", () => {
+    boomSound.play()
+})
+
+clapButton.addEventListener("click", () => {
+    clapSound.play()
+})
+
+hiHatButton.addEventListener("click", () => {
+    hiHatSound.play()
+})
+
+kickButton.addEventListener("click", () => {
+    kickSound.play()
+})
+
+openHatButton.addEventListener("click", () => {
+    openHatSound.play()
+})
+
+rideButton.addEventListener("click", () => {
+    rideSound.play()
+})
+
+snareButton.addEventListener("click", () => {
+    snareSound.play()
+})
+
+tinkButton.addEventListener("click", () => {
+    tinkSound.play()
+})
+
+tomButton.addEventListener("click", () => {
+    tomSound.play()
+})
+
 
 
 // button.addEventListener("keypress", (event) => {
