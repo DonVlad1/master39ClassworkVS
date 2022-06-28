@@ -10,33 +10,141 @@
 //     {
 //         console.log(`Hi, my name is ${this.name}, I am ${this.age} and I work as a ${this.job}`,);
 //     }
-//     work() 
+// //     work() 
+// //     {
+// //         console.log(`I am going to build a house, because I am a ${this.job}`);
+// //     }
+// // }
+// //    //create a new instance of the class
+// // const dave = new Person('Dave', 41,'Builder');
+// // dave.talks();
+
+
+// class Person
+// {
+//     constructor(name, age, job)
 //     {
-//         console.log(`I am going to build a house, because I am a ${this.job}`);
+//         this.name = name,
+//         this.age = age,
+//         this.job = job
+//     }
+
+//     talks()
+//     {
+//         console.log(`My name is ${this.name}, I am ${this.age} years old and I am an ${this.job}`)
+//         return this
+//     }
+//     walks()
+//     {
+//         console.log(`${this.name} is walking`)
+//         return this
 //     }
 // }
-//    //create a new instance of the class
-// const dave = new Person('Dave', 41,'Builder');
-// dave.talks();
+
+// let leon = new Person("Leon", "31", "Instructor")
+// let christian = new Person("Christian", "25", "Instructor")
+
+// leon.talks().walks()
 
 
-class Person
+// class Animal 
+// {
+//     constructor(name)
+//     {
+//         this.name = name;
+//         this.health = 100;
+//         this.hunger = 100;
+//     }
+//     drinks()
+//     {
+//         this.health +=5;
+//         return this;
+//     }
+
+//     eats()
+//     {
+//         this.health +=5;
+//         this.hunger +=10;
+//         console.log(`${this.name}'s health is ${this.health}`);
+//         return this;
+//     }
+//     stats()
+//     {
+//         return console.table({
+//             name: this.name,
+//             health: this.health
+//         });
+//     }
+// }
+
+// class Hamster extends Animal
+// {
+//     constructor(name, speed)
+//     {
+//         super(name, speed);
+//         this.speed = speed
+//     }
+//     playRace()
+//     {
+//         this.health += 5;
+//         this.hunger -= 5;
+//         console.log(`${this.name} is 2Fast4U`);
+//         return this;
+//     }
+//     barrelRoll()
+//     {
+//         console.log(`${this.name} do a barrel roll, you are such fast at ${this.speed} speed`);
+//         this.health += 15;
+//         return this;
+//     }
+    
+// }
+
+// let Billy2Paws = new Hamster("Billy2Paws", 20)
+// Billy2Paws.playRace().barrelRoll()
+// console.log(Billy2Paws)
+
+
+// class Person
+// {
+//     constructor(firstName, lastName)
+//     {
+//         this.firstName = firstName
+//         this.lastName = lastName
+//     }
+//     get fullName()
+//     {
+//         return `${this.firstName} ${this.lastName}`
+//     }
+
+//     set fullName(value)
+//     {
+//         const names = value.split(' ')
+//         this.firstName = names[0]
+//         this.lastName = names[1]
+//     }
+// }
+// let person = new Person('Dave', 'Jones')
+// // person.fullName = 'Will Smith'
+
+// console.log(person)
+
+
+class Car
 {
-    constructor(name, age, job)
+    constructor(carRegistration, parkingRate, stayTime)
     {
-        this.name = name,
-        this.age = age,
-        this.job = job
+        this.carRegistration = carRegistration
+        this.parkingRate = parkingRate
+        this.stayTime = stayTime
     }
 
-    talks()
+    calculatePrice()
     {
-        console.log(`My name is ${this.name}, I am ${this.age} years old and I am an ${this.job}`)
+        const totalCost = this.stayTime * this.parkingRate
+        return totalCost
     }
 }
 
-let leon = new Person("Leon", "31", "Instructor")
-let christian = new Person("Christian", "25", "Instructor")
-leon.talks()
-console.log(leon)
-console.log(christian)
+let car = new Car("SL52VX", 1.5, 5)
+console.log(`Parking for ${car.carRegistration} for a total of ${car.stayTime} hours will cost you £${car.calculatePrice()}`)
