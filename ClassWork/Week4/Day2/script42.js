@@ -146,5 +146,27 @@ class Car
     }
 }
 
-let car = new Car("SL52VX", 1.5, 5)
-console.log(`Parking for ${car.carRegistration} for a total of ${car.stayTime} hours will cost you £${car.calculatePrice()}`)
+
+class Staff extends Car
+{
+    constructor(staffNumber, creditsDue)
+    {
+    super(staffNumber, creditsDue)
+    this.staffNumber = staffNumber
+    this.creditsDue = creditsDue
+    }
+
+    caculateCreditLeft()
+    {
+
+    }
+}
+
+
+let car = new Car("SL52VX", 1.50, 5)
+let staff = new Staff("Bill", 30, 100, )
+
+
+// console.log(`Parking for ${car.carRegistration} for a total of ${car.stayTime} hours will cost you £${car.calculatePrice()}`)
+console.log(car)
+console.log(staff)
