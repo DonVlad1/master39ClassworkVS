@@ -20,6 +20,9 @@
 // // dave.talks();
 
 
+
+
+
 // class Person
 // {
 //     constructor(name, age, job)
@@ -130,43 +133,96 @@
 // console.log(person)
 
 
-class Car
-{
-    constructor(carRegistration, parkingRate, stayTime)
-    {
-        this.carRegistration = carRegistration
-        this.parkingRate = parkingRate
-        this.stayTime = stayTime
-    }
+// class Car
+// {
+//     constructor(carRegistration, parkingRate, stayTime)
+//     {
+//         this.carRegistration = carRegistration
+//         this.parkingRate = parkingRate
+//         this.stayTime = stayTime
+//     }
 
-    calculatePrice()
+//     calculatePrice()
+//     {
+//         const totalCost = this.stayTime * this.parkingRate
+//         return totalCost
+//     }
+// }
+
+
+// class Staff extends Car
+// {
+//     constructor(staffNumber, creditsDue)
+//     {
+//     super(staffNumber, creditsDue)
+//     this.staffNumber = staffNumber
+//     this.creditsDue = creditsDue
+//     }
+
+//     caculateCreditLeft()
+//     {
+
+//     }
+// }
+
+
+// let car = new Car("SL52VX", 1.50, 5)
+// let staff = new Staff("Bill", 30, 100, )
+
+
+// // console.log(`Parking for ${car.carRegistration} for a total of ${car.stayTime} hours will cost you £${car.calculatePrice()}`)
+// console.log(car)
+// console.log(staff)
+
+
+class drinkDetails
+{   constructor(drinkName, drinkPrice)
     {
-        const totalCost = this.stayTime * this.parkingRate
-        return totalCost
+        this.drinkName = drinkName
+        this.drinkPrice = drinkPrice
     }
 }
 
 
-class Staff extends Car
+class customerDetails
 {
-    constructor(staffNumber, creditsDue)
+    constructor(customerName, budgetTotal)
     {
-    super(staffNumber, creditsDue)
-    this.staffNumber = staffNumber
-    this.creditsDue = creditsDue
-    }
-
-    caculateCreditLeft()
-    {
-
+        this.customerName = customerName
+        this.budgetTotal = budgetTotal
     }
 }
 
 
-let car = new Car("SL52VX", 1.50, 5)
-let staff = new Staff("Bill", 30, 100, )
+const drinkFanta = new drinkDetails("Fanta", 3.50)
+const drinkPepsi = new drinkDetails("Pepsi", 7.00)
+const drinkSprite = new drinkDetails("Sprite", 4.25)
+
+let drinksTotal = 0
+const drinkPriceRange = [drinkFanta.drinkPrice, drinkPepsi.drinkPrice, drinkSprite.drinkPrice]
 
 
-// console.log(`Parking for ${car.carRegistration} for a total of ${car.stayTime} hours will cost you £${car.calculatePrice()}`)
-console.log(car)
-console.log(staff)
+
+const customerBilly = new customerDetails("Billy", 5)
+const customerJohn = new customerDetails("John", 23)
+const customerJane = new customerDetails("Jane", 80)
+
+
+for (let index = 0; index < drinkPriceRange.length; index++) {
+    drinksTotal += drinkPriceRange[index]
+}
+
+
+console.log(`Your order is ${drinkFanta.drinkName}, ${drinkPepsi.drinkName}, ${drinkSprite.drinkName}, which totals at £${drinksTotal}`)
+
+if (drinksTotal > customerBilly.budgetTotal) {
+    console.log(`Billy can't afford ${drinksTotal}`)
+}
+else
+{
+    console.log(`Billt can afford ${drinksTotal}`)
+}
+
+
+
+
