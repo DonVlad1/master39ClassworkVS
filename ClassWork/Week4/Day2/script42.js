@@ -203,32 +203,46 @@ const customerJohn = new customerDetails("John", 23)
 const customerJane = new customerDetails("Jane", 80)
 
 
-function priceCheck()
+function runProgram()
 {
+    const drinkRange = [drinkFanta, drinkPepsi, drinkSprite]
+    const customerRange = [customerBilly, customerJohn, customerJane]
+    const randomChoseCustomer = chooseCustomer(customerRange)
 
-    const drinkPriceRange = [drinkFanta.drinkPrice, drinkPepsi.drinkPrice, drinkSprite.drinkPrice]
-    const drinkPriceTotal = calculateTotal(drinkPriceRange)
-    
-    if (drinkPriceTotal > customerBilly.budgetTotal) {
-        console.log(`Your order is ${drinkFanta.drinkName}, ${drinkPepsi.drinkName}, ${drinkSprite.drinkName}, Billy can't afford ${drinkPriceTotal}`)
+    const drinkPriceTotal = calculateTotal(drinkRange)
+    if (drinkPriceTotal > randomChoseCustomer.budgetTotal) {
+        console.log(`Your order is ${drinkFanta.drinkName}, ${drinkPepsi.drinkName}, ${drinkSprite.drinkName}, ${randomChoseCustomer.customerName} can't afford ${drinkPriceTotal}`)
     }
     else
     {
-        console.log(`Your order is ${drinkFanta.drinkName}, ${drinkPepsi.drinkName}, ${drinkSprite.drinkName}, Billy can afford ${drinkPriceTotal}`)
+        console.log(`Your order is ${drinkFanta.drinkName}, ${drinkPepsi.drinkName}, ${drinkSprite.drinkName}, ${randomChoseCustomer.customerName} can afford ${drinkPriceTotal}`)
     }
 }
+
+
+function chooseCustomer(customerRange)
+{
+    const randomCustomer = customerRange[Math.floor(Math.random() * (2 - 0 + 1))]
+    return randomCustomer
+}
+
+// function chooseDrink(drinkRange)
+// {
+//     const randomDrink = customerRange[Math.floor(Math.random() * (2 - 0 + 1))]
+//     return randomDrink
+// }
 
 function calculateTotal(drinkPriceRange)
 {
     let drinksTotal = 0
 
     for (let index = 0; index < drinkPriceRange.length; index++) {
-        drinksTotal += drinkPriceRange[index]
+        drinksTotal += drinkPriceRange[index].drinkPrice
     }
     return drinksTotal
 }
 
 
-priceCheck()
+runProgram()
 
 
