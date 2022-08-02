@@ -74,3 +74,18 @@
 // };
 
 // createPost('post4', allPosts);
+
+
+fetch('https://meowfacts.herokuapp.com/')
+    .then(response => response.text())
+    .then(data => console.log(data));
+
+
+async function catFacts(){
+    const response = await fetch('https://meowfacts.herokuapp.com/');
+    let data = await response.text();
+    data = data.toUpperCase()
+    console.log(data)
+    }
+    
+catFacts()
