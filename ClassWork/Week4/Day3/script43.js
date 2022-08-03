@@ -67,18 +67,16 @@ function runProgram()
             if ((answers.drinkSelection == drinkRange[drinkIndex].drinkName) && (answers.customerSelection == customerRange[customerIndex].customerName)) 
             {
                 if (drinkRange[drinkIndex].drinkPrice > customerRange[customerIndex].budgetTotal) {
-                    console.log(`Your order is ${answers.drinkSelection}, ${answers.customerSelection} can't afford ${drinkRange[drinkIndex].drinkPrice}`)
+                    console.log(`Your order is ${answers.drinkSelection}, ${answers.customerSelection} can't afford £${drinkRange[drinkIndex].drinkPrice}`)
                     break
                 }
                 else
                 {
-                    console.log(`Your order is ${answers.drinkSelection}, ${answers.customerSelection} can afford ${drinkRange[drinkIndex].drinkPrice}`)
+                    console.log(`Your order is ${answers.drinkSelection}, ${answers.customerSelection} can afford £${drinkRange[drinkIndex].drinkPrice}`)
                     break
                 }
             }
-            
         }
-        
     }
 
     })
