@@ -1,7 +1,70 @@
 .App {
+  display: flex;
   text-align: center;
+  height: 100%;
+  width: 100%;
+  background-color: #61dafb;
+}
+.imperialGuardSpace
+{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  background-color: #61dafb;
 }
 
+.guardImages
+{
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: 100%;
+}
+
+#krieg
+{
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: 500px;
+}
+
+#steel
+{
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: 100%;
+}
+
+#cadia
+{
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: 100%;
+}
+
+#vostroya
+{
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: 100%;
+}
+
+.root
+{
+
+  height: 100%;
+  width: 100%;
+}
+
+p
+{
+ background-color: gold;
+ margin: 0%;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -21,8 +84,13 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: rgb(211, 59, 59);
 }
+
+
+
+
+
 
 .App-link {
   color: #61dafb;
