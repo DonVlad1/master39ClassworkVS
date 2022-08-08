@@ -31,6 +31,7 @@ function Cadia(props)
 {
   return(
     <div>
+          <p>Cadian Troops</p>
           <img id = "cadia" src={props.unitList} alt=""/>
           <p>Renowned for having the most elite units in the Imperium</p>
     </div>
@@ -41,6 +42,7 @@ function Krieg(props)
 {
   return(
     <div>
+      <p>Death Korp of Krieg</p>
       <img id = "krieg" src={props.unitList} alt=""/>
       <p>Renowned for their disregard for personal safety</p>
     </div>
@@ -51,6 +53,7 @@ function Steel(props)
 {
   return(
     <div>
+      <p>Armaghedon Steel Legion</p>
       <img id = "steel" src={props.unitList} alt=""/>
       <p>Renowned for thir extensive use of mechanised warfare</p>
     </div>
@@ -62,6 +65,7 @@ function Vostroya(props)
 {
   return(
     <div>
+      <p>Vostroyan Firstborn</p>
       <img id = "vostroya" src={props.unitList} alt=""/>
       <p>Renowned for their bear cavalry</p>
     </div>
