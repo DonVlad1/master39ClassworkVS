@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Modal from 'react-modal';
 import './App.css';
 
 
@@ -32,11 +33,11 @@ const App = () => {
   }
 
   return (
-    <div>
+    <div class='imageContainer'>
       <h1>Fetch API</h1>
       {anime.map((animeList, index) => {
         return (
-          <div key={index}>
+          <div class='animeImages' key={index}>
             <img src={animeList.anime_img} alt="movie poster"/>
             <p>{animeList.anime_name}</p>
           </div>

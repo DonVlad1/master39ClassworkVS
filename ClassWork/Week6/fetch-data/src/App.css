@@ -7,6 +7,22 @@
   pointer-events: none;
 }
 
+.root
+{
+  
+}
+
+.imageContainer
+{
+  margin: green;
+}
+.animeImages
+{
+  display: flex;
+  justify-content: center;
+  margin: red;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
