@@ -9,18 +9,49 @@
 
 .root
 {
-  
+  display: flex;
+  width: 50%;
+  height: 50%;
 }
 
 .imageContainer
 {
+  display: flex;
   margin: green;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-wrap: 1;
+  width: 100%;
+}
+
+.images
+{
+  width: 10%;
+
 }
 .animeImages
 {
   display: flex;
   justify-content: center;
+  flex-direction: column;
   margin: red;
+  width: 10%;
+  height: 10%;
+}
+
+
+.modal
+{
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(red, green, blue, alpha);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
 }
 
 @media (prefers-reduced-motion: no-preference) {
