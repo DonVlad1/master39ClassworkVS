@@ -1,72 +1,95 @@
-import React, { useState, useEffect } from "react";
-// import Modal from 'react-modal';
-import modalModule from './Modal'
+import React, { useState, useEffect } from 'react';
+import Modal from 'react-modal';
+// import styled from 'styled-components'
 import './App.css';
-import Modal from "./Modal";
+Modal.setAppElement('#root');
 
-const App = () => {
+const customStyles = {
+	content: {
+		top: '50%',
+		left: '50%',
+		right: 'auto',
+		bottom: 'auto',
+		marginRight: '-50%',
+		transform: 'translate(-50%, -50%)',
+	},
+};
 
-const [show, setShow] = useState(false)
+const App = () =>
+{
+	const [errorMsg, setErrorMsg] = useState('');
+	const [anime, setAnime] = useState([]);
 
-return(
-  <div className='App'>
-    <button onClick={() => setShow(true)}>Show Modal</button>
-    <Modal onClose={() => setShow(false)} show = {show}/>
-  </div>
-)
+	useEffect(() =>
+	{
+		const fetchData = async () => 
+		{
+			try
+			{
+				setErrorMsg('');
+				const response = await fetch('https://anime-facts-rest-api.herokuapp.com/api/v1');
+				if (!response.ok)
+				{
+					throw new Error(response.statusText);
+				}
+				const data = await response.json();
+				console.log(response)
+				console.log(data)
+				setAnime(data.data);
+			} catch (error)
+			{
+				setErrorMsg('Oops, something went wrong...');
+				console.log(error.message);
+			}
+		};
+		fetchData();
+	}, [])
 
-//   const [errorMsg, setErrorMsg] = useState('')
-//   const [anime, setAnime] = useState([])
+	return (
+		<div class="imageContainer">
+			{anime.map((animeList, index) =>
+			{
+				return (
+					<AnimeModal key={index} animeList={animeList}>
 
-
-
-//   function testFunction()
-//   {
-//     console.log("testMe")
-//   }
-
-
-//   useEffect (() => {
-//     const fetchData = async () => {
-
-//       try {
-//         setErrorMsg('')
-//         const response = await fetch('https://anime-facts-rest-api.herokuapp.com/api/v1');
-//         if(!response.ok){
-//           throw new Error(response.statusText)
-//         }
-//         const data = await response.json();
-//         console.log(response)
-//         console.log(data)
-//         setAnime(data.data)
-//       } catch (error) {
-//         setErrorMsg("Oops, something went wrong...")
-//         console.log(error.message)
-//       }
-//     }
-//     fetchData()
-// },[]);
-
-//   if(errorMsg !== ''){
-//     return <h1>{errorMsg}</h1>
-//   }
-
-//   return (
-//     <div class='imageContainer'>
-//       {anime.map((animeList, index) => {
-//         return (
-//           <div class='animeImages' key={index}>
-//             <img onClick= {testFunction} src={animeList.anime_img} alt="movie poster"/>
-//             <p>{animeList.anime_name}</p>
-//           </div>
-//         )
-//       })}
-//     </div>
-//   );
-// }
+					</AnimeModal>
+				);
+			})}
+		</div >
+	);
+};
 
 
 
+const AnimeModal = ({ animeList }) =>
+{
+	const [animeStateModal, showAnimeStateModal] = useState(false)
 
+	function openModal()
+	{
+		showAnimeStateModal(true);
+	}
+
+	function afterOpenModal()
+	{
+
+	}
+
+	function closeModal()
+	{
+		showAnimeStateModal(false);
+	}
+
+	return (
+		<div class="animeImages">
+			<p onClick={openModal}>{animeList.anime_name}</p>
+			<Modal isOpen={animeStateModal} onRequestClose={closeModal} style={customStyles} contentLabel="Example Modal">
+				<img src={animeList.anime_img} alt="anime" />
+				<p>{animeList.anime_name}</p>
+				<p>{animeList.anime_id}</p>
+			</Modal>
+		</div>
+	)
 }
+
 export default App;
