@@ -59,8 +59,6 @@ const App = () =>
 	);
 };
 
-
-
 const AnimeModal = ({ animeList }) =>
 {
 	const [animeStateModal, showAnimeStateModal] = useState(false)
@@ -68,11 +66,6 @@ const AnimeModal = ({ animeList }) =>
 	function openModal()
 	{
 		showAnimeStateModal(true);
-	}
-
-	function afterOpenModal()
-	{
-
 	}
 
 	function closeModal()
