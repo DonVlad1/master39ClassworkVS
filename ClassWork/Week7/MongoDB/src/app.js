@@ -16,8 +16,14 @@ async function app(yargsObject)
             await movie.add(collection)
             console.log(movie.list(collection))
         }
+        else if (yargsObject.read)
+        {
+
+        }
         else if (yargsObject.delete) 
         {
+            console.log("delete me")
+            const movie = new Movie(yargsObject.title, yargsObject.actor)
             await movie.delete(collection)
             console.log(movie.list(collection))
         }

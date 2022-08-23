@@ -15,7 +15,7 @@ class Movie
     }
     async delete(collection)
     {
-        await collection.deleteOne(this)
+        return await collection.deleteOne(this)
     }
 }
 

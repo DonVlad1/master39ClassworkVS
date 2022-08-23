@@ -17,11 +17,11 @@ async function connection()
     {
 
     }
-    finally
-    {
-        // Ensures that the client will close when you finish/error
-        await client.close();
-    }
+    // finally
+    // {
+    //     // Ensures that the client will close when you finish/error
+    //     await client.close();
+    // }
 }
 
 module.exports = { client, connection }
