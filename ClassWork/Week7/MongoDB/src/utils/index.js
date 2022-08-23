@@ -11,7 +11,7 @@ class Movie
     }
     async list(collection)
     {
-        return await collection.find({}).toArray();
+        return await collection.find().toArray();
     }
     async delete(collection)
     {
