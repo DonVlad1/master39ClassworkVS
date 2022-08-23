@@ -1,16 +1,17 @@
 const { MongoClient } = require("mongodb");
-
+require("dotenv").config()
 // Create a new MongoClient
-const client = new MongoClient("mongodb+srv://Vlad:<Put password here>@m40vlad.xupmudr.mongodb.net/?retryWrites=true&w=majority");
-async function run()
+const client = new MongoClient(process.env.MONGO_URI);
+async function connection()
 {
     try
     {
         // Connect the client to the server (optional starting in v4.7)
         await client.connect();
+        console.log("conected to mongo")
         // Establish and verify connection
-        await client.db("admin").command({ ping: 1 });
-        console.log("Connected successfully to server");
+        const db = client.db("Movies")
+        return db.collection("Movie")
     }
     catch (error)
     {
@@ -22,4 +23,5 @@ async function run()
         await client.close();
     }
 }
-run().catch(console.dir);
+
+module.exports = { client, connection }

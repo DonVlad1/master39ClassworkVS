@@ -1,11 +1,12 @@
 {
   "dependencies": {
-    "mongodb": "^4.9.0"
+    "dotenv": "^16.0.1",
+    "mongodb": "^4.9.0",
+    "yargs": "^17.5.1"
   },
   "name": "mongodb",
   "version": "1.0.0",
   "main": "script.js",
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
