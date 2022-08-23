@@ -2,7 +2,7 @@ const movieArr = []
 
 class Movie
 {
-    constructor(title, actor = "Not specified")
+    constructor(title = "Not specified", actor = "Not specified")
     {
         this.title = title
         this.actor = actor

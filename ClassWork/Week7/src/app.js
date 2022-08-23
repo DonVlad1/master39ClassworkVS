@@ -54,8 +54,9 @@ const app = (yargsObj) =>
     {
         if (yargsObj.title != null)
         {
-            let movie = new Movie(yargsObj.title, yargsObj.actor)
-            console.log(movie)
+            const movie = new Movie(yargsObj.title, yargsObj.actor)
+            movie.add()
+            console.log(movie.list())
         }
         else
         {
