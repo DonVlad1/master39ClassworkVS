@@ -17,6 +17,10 @@ class Movie
     {
         return await collection.deleteOne(this)
     }
+    async update(collection)
+    {
+        return await collection.updateOne(this)
+    }
 }
 
 module.exports = Movie
