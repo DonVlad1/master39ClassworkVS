@@ -19,6 +19,7 @@ class Movie
     }
     async update(collection)
     {
+
         return await collection.updateOne(this)
     }
 }

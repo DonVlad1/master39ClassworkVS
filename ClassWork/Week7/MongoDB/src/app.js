@@ -1,6 +1,8 @@
+const { string } = require("yargs");
 const yargs = require("yargs")
 const { client, connection } = require("./db/connections")
 const Movie = require("./utils")
+const ObjectId = require('mongodb').ObjectId;
 
 const app = async (yargsObject) =>
 {
@@ -18,6 +20,7 @@ const app = async (yargsObject) =>
             console.log("Readme")
             const movie = new Movie(yargsObject.title)
             await movie.list(collection)
+            // console.log(await collection.find({ _id: ObjectId("630500b0c668e911818fd004") }).toArray())
             console.log(await movie.list(collection))
         }
         else if (yargsObject.delete) 
@@ -46,6 +49,5 @@ const app = async (yargsObject) =>
         await client.close()
     }
 }
-
 
 app(yargs.argv)
