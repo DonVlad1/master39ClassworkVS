@@ -32,11 +32,11 @@ async function App(yargsObject)
         }
         else if (yargsObject.findAllActors) 
         {
-            await findTVActor({ actor: yargsObject.actor })
+            await findActor({ actor: yargsObject.actor })
         }
         else if (yargsObject.findOneTitle)
         {
-            await findTVTitle({ title: yargsObject.title })
+            await findTitle({ title: yargsObject.title })
         }
 
 
